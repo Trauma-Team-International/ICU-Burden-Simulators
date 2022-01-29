@@ -1,6 +1,6 @@
 # Forecasting ICU Burden and Fatalities Caused by Capacity Issues
 
-Below, several methods are provided for answering the question `how much ICU burden will there be` and `how much fatalities will be caused by excess demand for ICU beds`. These methods are provided to test and challenge outputs provided by opaque models that are based on undisclosed complexity and caveats. Each method provided below have been provided with auditability and absence of complexity in mind. The [Robust Event-Based Simulator](#robust-event-based-method) can be used as a single pipeline with one of the [provided SEIR methods](https://github.com/trauma-team-international/tree/master/SEIR) as an input for number of infections.
+Below, several methods are provided for answering the question `how much ICU burden will there be` and `how much fatalities will be caused by excess demand for ICU beds`. These methods are provided to test and challenge outputs provided by opaque models that are based on undisclosed complexity and caveats. Each method provided below have been provided with auditability and absence of complexity in mind. The [Robust Event-Based Simulator](#robust-event-based-method) can be used as a single pipeline with one of the [provided SEIR methods](https://github.com/trauma-team-international/SEIR) as an input for number of infections.
 
 ## Snapshot Method
 
@@ -8,7 +8,7 @@ DATA SOURCE: generated based on input parameters
 FOCUS: to evaluate outcomes of every possible parameter combination
 PARAMETERS: `capacity`, `doubles_in_days`, and `case_fatality_rate`
 
-First get the [code](https://github.com/trauma-team-international/icu-burden-simulators/simulators/icu_burden_snapshot.py) on to your machine, and then in :
+First get the [code](https://github.com/Trauma-Team-International/ICU-Burden-Simulators/blob/main/simulators/icu_burden_snapshot.py) on to your machine, and then in :
 
 ```
 from icu_burden_snapshot import simulate
@@ -91,4 +91,4 @@ Get the [code](https://github.com/trauma-team-international/ICU-Burden-Simulator
 
 A moving average based baseline method, where historical trend is used to predict future events across all countries with COVID-19 cases. Provides as output mean-average-error and relative-median-error for each country.
 
-First get the [code](https://github.com/trauma-team-international/ICU-Burden-Simulators/simulators/icu_burden_average.py) on to your machine, and then run it.
+First get the [code](https://github.com/Trauma-Team-International/ICU-Burden-Simulators/blob/main/simulators/icu_burden_average.py) on to your machine, and then run it.
